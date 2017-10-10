@@ -18,7 +18,7 @@ class CD
       Console.WriteLine("The price for this item is not valid.");
     }
   }
-  public void GetPrice()
+  public int GetPrice()
   {
     return _price;
   }
@@ -40,11 +40,11 @@ class CD
   }
   public CD(string newTitle, string newArtist, int newPrice = 10)
   {
-    // SetTitle(newTitle);
-    // SetArtist(newArtist);
-    // SetPrice(newPrice);
-
+    SetTitle(newTitle);
+    SetArtist(newArtist);
+    SetPrice(newPrice);
   }
+}
 public class Program
 {
   public static void Main()
@@ -58,10 +58,9 @@ public class Program
 
     foreach (CD album in CDs)
     {
-      Console.WriteLine(album.GetTitle);
-      Console.WriteLine("By " + album.GetArtist);
-      Console.WriteLine("Price: $" + album.GetPrice);
+      Console.WriteLine(album.GetTitle());
+      Console.WriteLine("By " + album.GetArtist());
+      Console.WriteLine("Price: $" + album.GetPrice());
     }
   }
-}
 }
